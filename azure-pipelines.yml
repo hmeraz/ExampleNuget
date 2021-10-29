@@ -1,0 +1,29 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: 'Navistar.Common.sln'
+    arguments: '-o app/'
+    zipAfterPublish: false
+    modifyOutputPath: false
+- task: NuGetCommand@2
+  inputs:
+    command: 'pack'
+    packagesToPack: 'Navistar.Common.nuspec'
+    versioningScheme: 'off'
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'd274dacd-16f1-425f-809f-0cffae8f26ef'
