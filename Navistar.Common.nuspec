@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package>
+  <metadata>
+    <id>Navistar.Common</id>
+    <version>1.0.3</version>
+    <title>Navistar.Common</title>
+    <authors>Axity</authors>
+    <owners>Hugo Meraz</owners>
+    <licenseUrl>https://www.axity.com/</licenseUrl>
+    <projectUrl>https://www.axity.com/</projectUrl>
+    <iconUrl>https://www.axity.com/</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common libraries to Navistar project</description>
+    <releaseNotes>Initial 1.0.3 release</releaseNotes>
+    <copyright>Copyright 2021 Axity</copyright>
+    <tags>Commons</tags>
+  </metadata>
+  <files>
+    <file src="app/Navistar.Common.dll" />
+  </files>
+</package>
