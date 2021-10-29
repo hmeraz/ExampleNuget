@@ -1,6 +1,6 @@
 # ExampleNuget
 
-# dotnetsay .NET Tool Sample
+# Nuget Package Sample
 
 This sample demonstrates how to create Nuget Package.
 
